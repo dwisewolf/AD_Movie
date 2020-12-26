@@ -1,4 +1,4 @@
-package com.machinetest.ad_movie;
+package com.machinetest.ad_movie.adapter;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
@@ -10,21 +10,22 @@ import android.widget.ImageView;
 
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.machinetest.ad_movie.R;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
-public class ComdeyAdapter extends RecyclerView.Adapter<ComdeyAdapter.ViewHolder> {
+public class AnimAdapter extends RecyclerView.Adapter<AnimAdapter.ViewHolder> {
     private final Activity activity;
     private Context _context;
 
     private final List<String> _listData_id; // header titles
     // child data in format of header title, child title
     private final List<String> listData_image;
-    private final ComdeyAdapter.ClickInterface onClickListener;
-    public ComdeyAdapter(Activity activity, List<String> listData_image,
-                         List<String> _listData_id,
-                         ComdeyAdapter.ClickInterface onClickListener) {
+    private final AnimAdapter.ClickInterface onClickListener;
+    public AnimAdapter(Activity activity, List<String> listData_image,
+                       List<String> _listData_id,
+                       AnimAdapter.ClickInterface onClickListener) {
         this.activity = activity;
         this._listData_id = _listData_id;
         this.listData_image = listData_image;
@@ -47,7 +48,7 @@ public class ComdeyAdapter extends RecyclerView.Adapter<ComdeyAdapter.ViewHolder
 
     @SuppressLint("SetTextI18n")
     @Override
-    public void onBindViewHolder(ComdeyAdapter.ViewHolder viewHolder, final int position) {
+    public void onBindViewHolder(AnimAdapter.ViewHolder viewHolder, final int position) {
 
 
         Picasso.get().load(listData_image.get(position))

@@ -1,8 +1,7 @@
-package com.machinetest.ad_movie;
+package com.machinetest.ad_movie.adapter;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
-import android.content.ComponentName;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,32 +10,33 @@ import android.widget.ImageView;
 
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.machinetest.ad_movie.R;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
-public class FamilyAdapter extends RecyclerView.Adapter<FamilyAdapter.ViewHolder> {
+public class ComdeyAdapter extends RecyclerView.Adapter<ComdeyAdapter.ViewHolder> {
     private final Activity activity;
     private Context _context;
 
     private final List<String> _listData_id; // header titles
     // child data in format of header title, child title
     private final List<String> listData_image;
-    private final FamilyAdapter.ClickInterface onClickListener;
-    public FamilyAdapter(Activity activity, List<String> listData_image,
+    private final ComdeyAdapter.ClickInterface onClickListener;
+    public ComdeyAdapter(Activity activity, List<String> listData_image,
                          List<String> _listData_id,
-                         FamilyAdapter.ClickInterface onClickListener) {
+                         ComdeyAdapter.ClickInterface onClickListener) {
         this.activity = activity;
         this._listData_id = _listData_id;
         this.listData_image = listData_image;
         this.onClickListener= onClickListener;
 
     }
+
     public interface ClickInterface {
         void ViewOnClick(View v, int position);
 
     }
-
 
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup viewGroup, int viewType) {
@@ -48,7 +48,7 @@ public class FamilyAdapter extends RecyclerView.Adapter<FamilyAdapter.ViewHolder
 
     @SuppressLint("SetTextI18n")
     @Override
-    public void onBindViewHolder(FamilyAdapter.ViewHolder viewHolder, final int position) {
+    public void onBindViewHolder(ComdeyAdapter.ViewHolder viewHolder, final int position) {
 
 
         Picasso.get().load(listData_image.get(position))
@@ -62,13 +62,13 @@ public class FamilyAdapter extends RecyclerView.Adapter<FamilyAdapter.ViewHolder
     @Override
     public int getItemCount() {
 
-       String activityname= activity.getClass().getSimpleName();
-       if (activityname.equals("MainActivity")) {
-           return 8;
-       }
-       else {
-           return listData_image.size();
-       }
+        String activityname= activity.getClass().getSimpleName();
+        if (activityname.equals("MainActivity")) {
+            return 8;
+        }
+        else {
+            return listData_image.size();
+        }
     }
 
 

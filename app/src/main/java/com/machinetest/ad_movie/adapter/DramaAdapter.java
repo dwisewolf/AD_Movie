@@ -1,4 +1,4 @@
-package com.machinetest.ad_movie;
+package com.machinetest.ad_movie.adapter;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
@@ -10,21 +10,22 @@ import android.widget.ImageView;
 
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.machinetest.ad_movie.R;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
-public class CrimeAdapter extends RecyclerView.Adapter<CrimeAdapter.ViewHolder> {
+public class DramaAdapter extends RecyclerView.Adapter<DramaAdapter.ViewHolder> {
     private final Activity activity;
     private Context _context;
 
     private final List<String> _listData_id; // header titles
     // child data in format of header title, child title
     private final List<String> listData_image;
-    private final CrimeAdapter.ClickInterface onClickListener;
-    public CrimeAdapter(Activity activity, List<String> listData_image,
+    private final DramaAdapter.ClickInterface onClickListener;
+    public DramaAdapter(Activity activity, List<String> listData_image,
                         List<String> _listData_id,
-                        CrimeAdapter.ClickInterface onClickListener) {
+                        DramaAdapter.ClickInterface onClickListener) {
         this.activity = activity;
         this._listData_id = _listData_id;
         this.listData_image = listData_image;
@@ -47,12 +48,13 @@ public class CrimeAdapter extends RecyclerView.Adapter<CrimeAdapter.ViewHolder> 
 
     @SuppressLint("SetTextI18n")
     @Override
-    public void onBindViewHolder(CrimeAdapter.ViewHolder viewHolder, final int position) {
+    public void onBindViewHolder(DramaAdapter.ViewHolder viewHolder, final int position) {
 
 
         Picasso.get().load(listData_image.get(position))
 
             .into(viewHolder.item_imageView);
+
 
 
     }

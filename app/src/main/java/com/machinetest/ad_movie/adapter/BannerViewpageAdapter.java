@@ -1,4 +1,4 @@
-package com.machinetest.ad_movie;
+package com.machinetest.ad_movie.adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -10,6 +10,7 @@ import android.widget.TextView;
 import androidx.viewpager.widget.PagerAdapter;
 
 
+import com.machinetest.ad_movie.R;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;

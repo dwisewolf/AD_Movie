@@ -1,4 +1,4 @@
-package com.machinetest.ad_movie;
+package com.machinetest.ad_movie.adapter;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
@@ -10,6 +10,7 @@ import android.widget.ImageView;
 
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.machinetest.ad_movie.R;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;

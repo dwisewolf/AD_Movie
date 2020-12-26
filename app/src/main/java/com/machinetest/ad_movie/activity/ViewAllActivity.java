@@ -1,18 +1,15 @@
-package com.machinetest.ad_movie;
+package com.machinetest.ad_movie.activity;
 
 import android.app.AlertDialog;
 import android.content.Intent;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
-import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.Switch;
 import android.widget.TextView;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.constraintlayout.widget.ConstraintLayout;
@@ -23,12 +20,20 @@ import com.google.android.material.bottomsheet.BottomSheetBehavior;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
+import com.machinetest.ad_movie.R;
+import com.machinetest.ad_movie.adapter.AdventureAdapter;
+import com.machinetest.ad_movie.adapter.AnimAdapter;
+import com.machinetest.ad_movie.adapter.ComdeyAdapter;
+import com.machinetest.ad_movie.adapter.CrimeAdapter;
+import com.machinetest.ad_movie.adapter.DocumAdapter;
+import com.machinetest.ad_movie.adapter.DramaAdapter;
+import com.machinetest.ad_movie.adapter.FamilyAdapter;
+import com.machinetest.ad_movie.adapter.ListAdapter;
 import com.machinetest.ad_movie.api.RetrofitClientInstance;
 import com.machinetest.ad_movie.helper.AppConstants;
+import com.machinetest.ad_movie.model.MovieModel;
 import com.shasin.notificationbanner.Banner;
 import com.squareup.picasso.Picasso;
-
-import org.json.JSONArray;
 
 import java.text.DateFormat;
 import java.text.ParseException;

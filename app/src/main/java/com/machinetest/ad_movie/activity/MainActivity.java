@@ -1,13 +1,9 @@
-package com.machinetest.ad_movie;
+package com.machinetest.ad_movie.activity;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.cardview.widget.CardView;
-import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager.widget.ViewPager;
-import androidx.viewpager2.widget.ViewPager2;
 
 import android.app.AlertDialog;
 import android.content.Intent;
@@ -21,18 +17,22 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.google.android.material.bottomsheet.BottomSheetBehavior;
-import com.google.android.material.tabs.TabLayout;
-import com.google.android.material.tabs.TabLayoutMediator;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
+import com.machinetest.ad_movie.R;
+import com.machinetest.ad_movie.adapter.AdventureAdapter;
+import com.machinetest.ad_movie.adapter.AnimAdapter;
+import com.machinetest.ad_movie.adapter.BannerViewpageAdapter;
+import com.machinetest.ad_movie.adapter.ComdeyAdapter;
+import com.machinetest.ad_movie.adapter.CrimeAdapter;
+import com.machinetest.ad_movie.adapter.DocumAdapter;
+import com.machinetest.ad_movie.adapter.DramaAdapter;
+import com.machinetest.ad_movie.adapter.FamilyAdapter;
+import com.machinetest.ad_movie.adapter.ListAdapter;
 import com.machinetest.ad_movie.api.RetrofitClientInstance;
 import com.machinetest.ad_movie.helper.AppConstants;
 import com.squareup.picasso.Picasso;
-
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -133,7 +133,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        Intent intent=new Intent(MainActivity.this,ViewAllActivity.class);
+        Intent intent=new Intent(MainActivity.this, ViewAllActivity.class);
 
         action_viewAll.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -597,7 +597,7 @@ public class MainActivity extends AppCompatActivity {
             // Response<List<ClassVideo>> response=   call.execute();
 
         } catch (Exception e) {
-            String a = "";
+
             dialog.cancel();
         }
     }

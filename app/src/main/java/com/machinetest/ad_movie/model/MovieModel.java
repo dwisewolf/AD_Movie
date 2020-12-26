@@ -1,4 +1,4 @@
-package com.machinetest.ad_movie;
+package com.machinetest.ad_movie.model;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
