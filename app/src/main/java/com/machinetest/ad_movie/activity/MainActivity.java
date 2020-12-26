@@ -102,16 +102,14 @@ public class MainActivity extends AppCompatActivity {
 
         final Handler handler = new Handler();
 
-        final Runnable update = new Runnable() {
-            public void run() {
-                if (page_position == slider_image_list.size()) {
-                    page_position = 0;
-                } else {
-                    page_position = page_position + 1;
-                }
-
-                vp_slider.setCurrentItem(page_position, true);
+        final Runnable update = () -> {
+            if (page_position == slider_image_list.size()) {
+                page_position = 0;
+            } else {
+                page_position = page_position + 1;
             }
+
+            vp_slider.setCurrentItem(page_position, true);
         };
 
         new Timer().schedule(new TimerTask() {
@@ -126,12 +124,7 @@ public class MainActivity extends AppCompatActivity {
 
         get_Banner();
 
-        play.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                sheetBehavior.setState(BottomSheetBehavior.STATE_HIDDEN);
-            }
-        });
+        play.setOnClickListener(view -> sheetBehavior.setState(BottomSheetBehavior.STATE_HIDDEN));
 
         Intent intent=new Intent(MainActivity.this, ViewAllActivity.class);
 
@@ -360,7 +353,7 @@ public class MainActivity extends AppCompatActivity {
             // Response<List<ClassVideo>> response=   call.execute();
 
         } catch (Exception e) {
-            String a = "";
+
             dialog.cancel();
         }
     }
@@ -878,7 +871,7 @@ public class MainActivity extends AppCompatActivity {
                             data_release.add(release_date.getAsString());
                             data_heading.add(original_title.getAsString());
                             data_poster.add(AppConstants.IMAGE_URL45 +backdrop_path.getAsString());
-                            String a = "";
+
 
                         }
 

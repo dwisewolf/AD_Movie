@@ -62,10 +62,8 @@ public class ViewAllActivity extends AppCompatActivity {
     DramaAdapter dramaAdapter;
     DocumAdapter documAdapter;
     FamilyAdapter familyAdapter;
-    private LinearLayout bottom_sheet;
     private BottomSheetBehavior sheetBehavior;
     private TextView heading;
-    private TextView play;
     private TextView release;
     private TextView details;
 
@@ -704,11 +702,11 @@ public class ViewAllActivity extends AppCompatActivity {
     void  init(){
         viewallFilms = findViewById(R.id.viewallFilms);
         constraintLayout = findViewById(R.id.content);
-        bottom_sheet = findViewById(R.id.bottom_sheet_);
+        LinearLayout bottom_sheet = findViewById(R.id.bottom_sheet_);
         sheetBehavior = BottomSheetBehavior.from(bottom_sheet);
         sheetBehavior.setState(BottomSheetBehavior.STATE_HIDDEN);
         heading=findViewById(R.id.heading);
-        play=findViewById(R.id.play);
+        TextView play = findViewById(R.id.play);
         release=findViewById(R.id.release);
         details=findViewById(R.id.details);
         thumb=findViewById(R.id.thumbs);
