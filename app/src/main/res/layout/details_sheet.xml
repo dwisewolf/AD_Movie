@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/bottom_sheet_"
+    android:layout_width="match_parent"
+    android:layout_height="180dp"
+    android:background="@color/letter_color"
+    android:elevation="30dp"
+    android:orientation="vertical"
+    android:padding="10dp"
+    android:translationZ="30dp"
+    app:behavior_hideable="true"
+    app:behavior_peekHeight="0dp"
+    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="3"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/thumbs"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="2" />
+
+        <LinearLayout
+            android:layout_marginStart="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:textSize="15sp"
+                android:textColor="@color/white"
+                android:fontFamily="@font/robotomono_medium"
+                android:id="@+id/heading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Heading" />
+
+            <TextView
+                android:layout_marginTop="3dp"
+                android:textColor="@color/grey"
+                android:textSize="12sp"
+                android:id="@+id/release"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TextView" />
+
+            <TextView
+                android:fontFamily="@font/robotoregular"
+                android:layout_marginTop="5dp"
+                android:id="@+id/details"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:textSize="13sp"
+                android:ellipsize="end"
+                android:maxLines="3"
+                android:text="Your payment was done. Visit My Course section to view your package setails"
+                android:textColor="@color/white" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/play"
+        android:layout_width="wrap_content"
+android:background="@color/white"
+        android:layout_height="36dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:text="play"
+        android:textColor="@color/black"
+        android:textSize="14sp" />
+</LinearLayout>
