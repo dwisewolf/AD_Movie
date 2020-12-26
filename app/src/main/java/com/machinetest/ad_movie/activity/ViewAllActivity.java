@@ -48,6 +48,8 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 
+// VIEW ALL MOVIE LIST , WITH SORTING FUNCTIONS
+
 public class ViewAllActivity extends AppCompatActivity {
 
     RecyclerView viewallFilms;
